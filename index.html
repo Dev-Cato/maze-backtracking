@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="theme-dark">
+
+<head>
+    <title>Cato Dev</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="stuff/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="stuff/favicon-16x16.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="row">
+            <div id="maze"></div>
+
+            <div class="colume">
+
+                <div class="row">
+                    <div class="controls">
+
+                        <div class="stats">
+                            <div class="row">
+                                <h1>Backtracking Schritte:</h1>
+                                <h1 id="backtrackingSteps">0</h1>
+                            </div>
+    
+                            <div class="row">
+                                <h1>Rekursive Abstiege:</h1>
+                                <h1 id="recursiveDescent">0</h1>
+                            </div>
+    
+                        </div>
+    
+                        <div class="row">
+                            <button id="start_button" onclick="start()" disabled="true">Start</button>
+                            <button id="reset_button" onclick="reset()" disabled="true">Reset</button>
+                        </div>
+    
+                        <div class="row">
+                            <div class="range">
+                                <input type="range" min="25" max="1000" value="200" onchange="timeing = this.value">
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="builder">
+                        <div class="row">
+                            <button id="builder_wall_button" onclick="builder(this, 1)" disabled="true">Wall</button>
+                            <button id="builder_tile_button" onclick="builder(this, 0)" disabled="true">Tile</button>
+                        </div>
+                        <div class="row">
+                            <button id="builder_start_button" onclick="builder(this, 6)" disabled="true">Start</button>
+                            <button id="builder_finish_button" onclick="builder(this, 7)" disabled="true">Finish</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <input id="toggle" class="toggle" type="checkbox" onchange="changeTheme()">
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
